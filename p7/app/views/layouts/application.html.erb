@@ -13,28 +13,26 @@
 
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <%= favicon_link_tag "tyson.jpg" %>
   	<title><%= content_for?(:title) ? yield(:title) : "Project 7" %></title>
-        <%= 
+
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <div id="container" class="container">
-  <body>
-    <header>
-	<%= render 'layouts/navigation' %>
-    </header>
-    <div class="row">
-      <div class="large-12 columns">
-	<div id="main" role="main">
-	  <%= yield %>
-	</div>
-      </div>
-    </div>
-    
+    <body>
+        <header>
+          <%= render 'layouts/navigation' %> 
+        </header>
+        <div class="row">
+          <div class="large-12 columns">
+            <div id="main" role="main">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
     <%= javascript_include_tag "application" %>
-    <% render 'layouts/footer' %>
-    </div>  
-</body>
+   </body>
 </html>
+
