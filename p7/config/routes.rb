@@ -1,6 +1,10 @@
 P7::Application.routes.draw do
+  get "tag/create"
   get "home/index"
   root :to => "home#index"
+  resources :photos do
+    resources :tags
+  end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
